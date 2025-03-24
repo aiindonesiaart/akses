@@ -1,0 +1,67 @@
+<!-- posts/post1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akses</title>
+  <link rel="stylesheet" href="../styles.css">
+   <link rel="stylesheet" href="../log.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+ <div class="login-container">
+    <!-- Login Form -->
+    <form id="loginForm" class="login-form">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p id="error-message" class="error-message"></p>
+    </form>
+
+ <div id="content" class="content" style="display: none;">
+     <div class="container">
+   <div id="header"></div>
+  <div class="content">
+    <div id="post-content"></div>
+  </div>
+       
+<h6>Anda login sampai: <span id="expiryDate"></span></h6>
+      <button id="logoutBtn" class="btn">Logout</button>
+        <div id="footer"></div>
+     </div>
+  </div>
+ 
+  <script>
+    // Load header and footer
+    fetch('../header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+    // Load and render markdown
+    fetch('be-test.html')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('post-content').innerHTML = 
+          marked.parse(text);
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../log.js"></script>
+</body>
+</html>
