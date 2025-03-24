@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <div id="header"></div>
-
  <div class="login-container">
     <!-- Login Form -->
     <form id="loginForm" class="login-form">
@@ -30,16 +28,17 @@
 
  <div id="content" class="content" style="display: none;">
      <div class="container">
-  
+   <div id="header"></div>
   <div class="content">
     <div id="post-content"></div>
   </div>
-<h6>Anda login sampai: <span id="expiryDate"></span>.</h6>
+       
+<h6>Anda login sampai: <span id="expiryDate"></span></h6>
       <button id="logoutBtn" class="btn">Logout</button>
+        <div id="footer"></div>
      </div>
   </div>
-  <div id="footer"></div>
-
+ 
   <script>
     // Load header and footer
     fetch('../header.html')
