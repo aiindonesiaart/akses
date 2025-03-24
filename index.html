@@ -1,22 +1,21 @@
- <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akses</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
       .container {
             max-width: 800px;
             margin: 0 auto;
             font-family: Arial, sans-serif;
         }
     </style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - My Blog</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="log.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-<div id="header"></div>
 <div class="login-container">
     <!-- Login Form -->
     <form id="loginForm" class="login-form">
@@ -35,7 +34,7 @@
 
  <div id="content" class="content" style="display: none;">
      <div class="container">
- 
+<div id="header"></div> 
 <div class="content">
     <h2>Latest Posts</h2>
     <div class="post-list">
@@ -51,11 +50,12 @@
       </div>
     </div>
   </div>
+       <div id="footer"></div>
       <h6>Anda login sampai: <span id="expiryDate"></span>.</h6>
       <button id="logoutBtn" class="btn">Logout</button>
     </div>
   </div>
- <div id="footer"></div>
+
 <script>
     // Load header and footer
     fetch('header.html')
