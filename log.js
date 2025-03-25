@@ -1,6 +1,6 @@
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLogLoaded', function () {
   const loginForm = document.getElementById('loginForm');
-  const content = document.getElementById('content');
+  const contentlog = document.getElementById('contentlog');
   const logoutBtn = document.getElementById('logoutBtn');
   const errorMessage = document.getElementById('error-message');
   const expiryDateElement = document.getElementById('expiryDate');
@@ -20,7 +20,7 @@
 
     if (now < expiry) {
       // User is still logged in
-      showContent(email, expiry);
+      showcontentlog(email, expiry);
     } else {
       // Login expired
       localStorage.removeItem('loginData');
@@ -49,10 +49,10 @@
       const loginData = { email, expiry };
       localStorage.setItem('loginData', JSON.stringify(loginData));
 
-      // Show content
-      showContent(email, expiry);
+      // Show contentlog
+      showcontentlog(email, expiry);
     } else {
-      errorMessage.textContent = 'Invalid email or password';
+      errorMessage.textcontentlog = 'Invalid email or password';
       errorMessage.style.display = 'block';
     }
   });
@@ -60,21 +60,21 @@
   // Handle logout button click
   logoutBtn.addEventListener('click', function () {
     localStorage.removeItem('loginData'); // Remove login data
-    hideContent(); // Hide content and show login form
+    hidecontentlog(); // Hide contentlog and show login form
   });
 
-  // Function to show content and set the expiry date
-  function showContent(email, expiry) {
+  // Function to show contentlog and set the expiry date
+  function showcontentlog(email, expiry) {
     loginForm.style.display = 'none';
-    content.style.display = 'block';
-    expiryDateElement.textContent = new Date(expiry).toLocaleString();
+    contentlog.style.display = 'block';
+    expiryDateElement.textcontentlog = new Date(expiry).toLocaleString();
   }
 
-  // Function to hide content and show login form
-  function hideContent() {
+  // Function to hide contentlog and show login form
+  function hidecontentlog() {
     loginForm.reset();
     loginForm.style.display = 'block';
-    content.style.display = 'none';
+    contentlog.style.display = 'none';
     errorMessage.style.display = 'none';
   }
 });
