@@ -63,13 +63,5 @@ input[type=submit]:hover {
 }
 .cp-text{ color: rgba(0,0,0,.7); text-shadow: 0 1px rgba(255, 255, 255, 0.1);}
 
-.gallery-item {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
 
-.gallery-item img {
-  width: 100%;
-}
 
