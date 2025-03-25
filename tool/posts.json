@@ -1,0 +1,32 @@
+[
+   {
+    "alt": "Resep Otomotif",  
+    "img": "https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-otomotif.png",
+    "url": "/pelatihan/resep/otomotif.html"
+  },
+   {
+    "alt": "Resep Parfum",  
+    "img": "https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-parfum.png",
+    "url": "/pelatihan/resep/parfum.html"
+  },
+   {
+    "alt": "Resep Homecare",  
+    "img": "https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-homecare.jpg",
+    "url": "/pelatihan/resep/homecare.html"
+  },
+   {
+    "alt": "Resep Kimia Laundry",  
+    "img": "https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-laundry.png",
+    "url": "/pelatihan/resep/kimia-laundry.html"
+  },
+   {
+    "alt": "Resep Laundry Sepatu",  
+    "img": "https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-laundry-sepatu.png",
+    "url": "/pelatihan/resep/laundry-sepatu.html"
+  },
+  {
+    "alt": "Prompt Generator Gambar AI",
+    "img": "https://ratakan.com/uploads/prd-e4c6a0fdb3.jpg",
+    "url": "/akses/tool/image-pg.html"
+  }
+]
