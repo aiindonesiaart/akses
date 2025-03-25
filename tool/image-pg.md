@@ -1,4 +1,4 @@
-# Petunjuk Penggunaan
+### Petunjuk Penggunaan
 
 1. Prompt disarankan ditulis dalam bahasa Inggris
 2. Pilih kolom yang tersedia atau abaikan
