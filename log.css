@@ -19,13 +19,8 @@ body {
 }
 
 .login-form h2,
-.content h2 {
   margin-bottom: 1.5rem;
   color: #333;
-}
-
-.content h6 {
- text-align: center;
 }
 
 .input-group {
@@ -74,7 +69,7 @@ body {
   display: none;
 }
 
-.content {
+.container {
   margin-top: 1rem;
 }
 
