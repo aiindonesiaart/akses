@@ -90,7 +90,7 @@ footer a {
 .content {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 20px;
+  padding: 5px;
 }
 .content h1, h2, h3 {
   text-align: center;
