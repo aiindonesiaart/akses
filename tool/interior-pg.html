@@ -1,0 +1,155 @@
+<!-- posts/post1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akses</title>
+  <link rel="stylesheet" href="../styles.css">
+   <link rel="stylesheet" href="../log.css">
+   <link rel="stylesheet" href="style-pg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+ <div class="login-container">
+    <!-- Login Form -->
+    <form id="loginForm" class="login-form">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p id="error-message" class="error-message"></p>
+    </form>
+
+ <div id="content" class="container" style="display: none;">
+   <div id="header"></div>
+  <div class="content">
+    <form id="design-form">
+        <label for="perspective">Perspective:</label>
+        <select id="perspective">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="space-type">Space Type:</label>
+        <select id="space-type">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="style">Style:</label>
+        <select id="style">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="color-palette">Color Palette:</label>
+        <select id="color-palette">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <!-- Add more select elements for other categories -->
+        <label for="furniture">Furniture:</label>
+        <select id="furniture">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="layout">Layout:</label>
+        <select id="layout">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="lighting">Lighting:</label>
+        <select id="lighting">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="materials">Materials:</label>
+        <select id="materials">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="textures">Textures:</label>
+        <select id="textures">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="accessories">Accessories:</label>
+        <select id="accessories">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="mood">Mood:</label>
+        <select id="mood">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        
+    </form>
+
+    <div class="container">
+        <button class="button" onclick="generatePrompt()">Generate Prompt</button>
+        <button class="button" onclick="generateRandomPrompt()">Randomly generated</button>
+        <button class="button" id="copy-button">Copy to clipboard</button>
+    </div>
+      
+<p id="prompt"></p>
+    <div id="post-content"></div>
+  </div>
+      <button id="logoutBtn" class="btn"><span id="expiryDate"></span> Logout</button>
+        <div id="footer"></div>
+     </div>
+  
+ 
+  <script>
+    // Load header and footer
+    fetch('../header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+    // Load and render markdown
+    fetch('guide-pg.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('post-content').innerHTML = 
+          marked.parse(text);
+      });
+  </script>
+   <script>
+function CopyToClipboard(id)
+{
+var r = document.createRange();
+r.selectNode(document.getElementById(id));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../log.js"></script>
+  <script src="interior-pg.js"></script>
+</body>
+</html>
