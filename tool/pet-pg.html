@@ -1,0 +1,338 @@
+<!-- posts/post1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akses</title>
+  <link rel="stylesheet" href="../styles.css">
+   <link rel="stylesheet" href="../log.css">
+   <link rel="stylesheet" href="style-pg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+ <div class="login-container">
+    <!-- Login Form -->
+    <form id="loginForm" class="login-form">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p id="error-message" class="error-message"></p>
+    </form>
+
+ <div id="content" class="container" style="display: none;">
+   <div id="header"></div>
+  <div class="content">
+   <div class="container">
+    <h1>Pet Prompt Generator</h1>
+
+    <!-- Art Style Selection -->
+    <div class="option">
+      <label for="art-style">Art Style:</label>
+      <select id="art-style">
+        <option value="">Choose Art Style</option>
+        <option value="artistic painting">Artistic Painting</option>
+        <option value="realistic photography">Realistic Photography</option>
+        <option value="realistic drawing">Realistic Drawing</option>
+        <option value="realistic painting">Realistic Painting</option>
+        <option value="fine art photography">Fine Art Photography</option>
+        <option value="studio photography">Studio Photography</option>
+        <option value="digital painting">Digital Painting</option>
+        <option value="digital art">Digital Art</option>
+        <option value="digital illustration">Digital Illustration</option>
+        <option value="illustration">Illustration</option>
+        <option value="watercolor illustration">Watercolor Illustration</option>
+        <option value="watercolor painting">Watercolor Painting</option>
+        <option value="watercolor portrait">Watercolor Portrait</option>
+        <option value="cinematic photography">Cinematic Photography</option>
+        <option value="soft focus photography">Soft Focus Photography</option>
+        <option value="high contrast photography">High Contrast Photography</option>
+        <option value="oil painting">Oil Painting</option>
+        <option value="pop art style drawing">Pop Art Style Drawing</option>
+        <option value="cartoonish drawing">Cartoonish Drawing</option>
+        <option value="cartoonish digital art">Cartoonish Digital Art</option>
+        <option value="fun cartoon">Fun Cartoon</option>
+      </select>
+    </div>
+
+    <!-- Pet Type Selection -->
+    <div class="option">
+      <label for="pet-type">Pet Type:</label>
+      <select id="pet-type">
+        <option value="">Choose Cat Or Dog</option>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+      </select>
+      <div id="cat-breed" class="sub-option hidden">
+        <label for="cat-breed-select">Cat Breed:</label>
+        <select id="cat-breed-select">
+          <option value="American Shorthair">American Shorthair</option>
+          <option value="Persian">Persian</option>
+          <option value="Exotic Shorthair">Exotic Shorthair</option>
+          <option value="British Shorthair">British Shorthair</option>
+          <option value="Birman">Birman</option>
+          <option value="Maine Coon">Maine Coon</option>
+          <option value="Ragdoll">Ragdoll</option>
+          <option value="Sphynx">Sphynx</option>
+          <option value="Russian Blue">Russian Blue</option>
+        </select>
+      </div>
+      <div id="dog-breed" class="sub-option hidden">
+        <label for="dog-breed-select">Dog Breed:</label>
+        <select id="dog-breed-select">
+          <option value="German Shepherd">German Shepherd</option>
+          <option value="Bulldog">Bulldog</option>
+          <option value="Labrador Retriever">Labrador Retriever</option>
+          <option value="Golden Retriever">Golden Retriever</option>
+          <option value="French Bulldog">French Bulldog</option>
+          <option value="Siberian Husky">Siberian Husky</option>
+          <option value="Beagle">Beagle</option>
+          <option value="Alaskan Malamute">Alaskan Malamute</option>
+          <option value="Poodle">Poodle</option>
+          <option value="Chihuahua">Chihuahua</option>
+          <option value="Australian Cattle Dog">Australian Cattle Dog</option>
+          <option value="Dachshund">Dachshund</option>
+          <option value="Pug">Pug</option>
+          <option value="Rottweiler">Rottweiler</option>
+          <option value="Airedale Terrier">Airedale Terrier</option>
+          <option value="Border Collie">Border Collie</option>
+          <option value="Australian Shepherd">Australian Shepherd</option>
+          <option value="Affenpinscher">Affenpinscher</option>
+          <option value="American Staffordshire Terrier">American Staffordshire Terrier</option>
+          <option value="Boxer">Boxer</option>
+          <option value="Maltese dog">Maltese dog</option>
+          <option value="Bichon Frisé">Bichon Frisé</option>
+          <option value="English Cocker Spaniel">English Cocker Spaniel</option>
+          <option value="Afghan Hound">Afghan Hound</option>
+          <option value="American Eskimo Dog">American Eskimo Dog</option>
+          <option value="Anatolian Shepherd Dog">Anatolian Shepherd Dog</option>
+          <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+          <option value="Chow Chow">Chow Chow</option>
+          <option value="Pomeranian">Pomeranian</option>
+          <option value="Cavalier King Charles Spaniel">Cavalier King Charles Spaniel</option>
+          <option value="Pembroke Welsh Corgi">Pembroke Welsh Corgi</option>
+          <option value="Basset Hound">Basset Hound</option>
+          <option value="Basenji">Basenji</option>
+          <option value="Havanese">Havanese</option>
+          <option value="St. Bernard">St. Bernard</option>
+          <option value="Belgian Shepherd">Belgian Shepherd</option>
+          <option value="Newfoundland dog">Newfoundland dog</option>
+          <option value="Boston Terrier">Boston Terrier</option>
+          <option value="Cairn Terrier">Cairn Terrier</option>
+          <option value="Brittany Spaniel">Brittany Spaniel</option>
+          <option value="Sheltie">Sheltie</option>
+          <option value="Black Russian Terrier">Black Russian Terrier</option>
+          <option value="Bullmastiff">Bullmastiff</option>
+          <option value="Bedlington Terrier">Bedlington Terrier</option>
+          <option value="American Pit Bull Terrier">American Pit Bull Terrier</option>
+          <option value="Cane Corso">Cane Corso</option>
+          <option value="Shih Tzu">Shih Tzu</option>
+          <option value="Dobermann">Dobermann</option>
+          <option value="Shiba Inu">Shiba Inu</option>
+          <option value="Samoyed">Samoyed</option>
+          <option value="Sarabi dog">Sarabi dog</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Description Selection -->
+    <div class="option">
+      <label for="description">Description:</label>
+      <select id="description">
+        <option value="">Choose Description</option>
+        <option value="a muscular and well-built with short fur, exhibiting a calm demeanor">A muscular and well-built with short fur, exhibiting a calm demeanor</option>
+        <option value="a fluffy, long-hair with a round face and large expressive eyes">A fluffy, long-hair with a round face and large expressive eyes</option>
+        <option value="a compact with a short, plush coat">A compact with a short, plush coat</option>
+          <option value="a round-faced with dense, plush blue-gray fur and amber eyes">A round-faced with dense, plush blue-gray fur and amber eyes</option>
+          <option value="a long-haired  with a silky coat, deep blue eyes, and white paws">A long-haired  with a silky coat, deep blue eyes, and white paws</option>
+          <option value="a large majestic with tufted ears, a long, flowing tail, and a thick mane of fur"> A large majestic with tufted ears, a long, flowing tail, and a thick mane of fur</option>
+          <option value="a large affectionate with striking blue eyes and a silky coat that drapes gracefully">A large affectionate with striking blue eyes and a silky coat that drapes gracefully</option>
+          <option value="inquisitive expression">inquisitive expression</option>
+          <option value="dense coat of bluish-gray fur and striking green eyes">dense coat of bluish-gray fur and striking green eyes</option>
+          <option value="standing tall, alert, with sharp eyes, showing off its strong physique">standing tall, alert, with sharp eyes, showing off its strong physique</option>
+          <option value="sitting calmly, with its signature wrinkled face and stocky build">sitting calmly, with its signature wrinkled face and stocky build</option>
+          <option value="joyful expression">joyful expression</option>
+          <option value="smiling with a wagging tail">smiling with a wagging tail</option>
+          <option value="exaggerated cute features, wearing a colorful bow tie">exaggerated cute features, wearing a colorful bow tie</option>
+          <option value="with piercing blue eyes"> with piercing blue eyes</option>
+          <option value="curly fur well-groomed">curly fur well-groomed</option>
+          <option value="fierce">fierce</option>
+          <option value="focused on herding cattle">focused on herding cattle</option>
+          <option value="a cute expression">a cute expression</option>
+          <option value="in a silly pose, wearing a tiny hat">in a silly pose, wearing a tiny hat</option>
+          <option value="strong and confident, guarding a property">strong and confident, guarding a property</option>
+          <option value="alert and proud">alert and proud</option>
+          <option value="running energetically with a Frisbee">running energetically with a Frisbee</option>
+          <option value="herding sheep in the countryside">herding sheep in the countryside</option>
+          <option value="curious">curious</option>
+          <option value="muscular and protective">muscular and protective</option>
+          <option value="alert with ears perked">alert with ears perked</option>
+          <option value="fluffy with a joyful expression">fluffy with a joyful expression</option>
+          <option value="happy eyes">happy eyes</option>
+          <option value="regal and elegant">regal and elegant</option>
+          <option value="fluffy coat">fluffy coat</option>
+      </select>
+    </div>
+
+    <!-- Location Selection -->
+    <div class="option">
+      <label for="location">Location:</label>
+      <select id="location">
+        <option value="">Choose Location</option>
+        <option value="indoor setting with a soft, natural light filtering through a window">Indoor setting with a soft, natural light filtering through a window</option>
+        <option value="luxurious living room with velvet cushions and a chandelier overhead">Luxurious living room with velvet cushions and a chandelier overhead</option>
+        <option value="simple studio backdrop with neutral tones">Simple studio backdrop with neutral tones</option>
+          <option value="a cozy rustic kitchen setting with wooden floors">A cozy, rustic kitchen setting with wooden floors</option>
+          <option value="a peaceful garden surrounded by flowers and greenery">A peaceful garden surrounded by flowers and greenery</option>
+          <option value="a rustic barn with natural wood accents, sun streaming through cracks in the walls">A rustic barn with natural wood accents, sun streaming through cracks in the walls</option>
+          <option value="a cozy living room with soft rugs">A cozy living room with soft rugs</option>
+          <option value="a modern minimalist living room with sleek furniture">A modern, minimalist living room with sleek furniture</option>
+          <option value="an elegant study with dark wood furniture and soft leather chairs">An elegant study with dark wood furniture and soft leather chairs</option>
+          <option value="in a grassy meadow">in a grassy meadow</option>
+          <option value="in a park">in a park</option>
+          <option value="by the lake">by the lake</option>
+          <option value="in a café">in a café</option>
+          <option value="snow-covered mountains">snow-covered mountains</option>
+          <option value="surrounded by trees">surrounded by trees</option>
+          <option value="on a snow-covered hill">on a snow-covered hill</option>
+          <option value="in a stylish living room">in a stylish living room</option>
+          <option value="on a chair">on a chair</option>
+          <option value="in front of a large house">in front of a large house</option>
+          <option value="on a forest trail">on a forest trail</option>
+          <option value="on a green meadow">on a green meadow</option>
+          <option value="in the countryside">in the countryside</option>
+          <option value="on a couch">on a couch</option>
+          <option value="on a sandy beach">on a sandy beach</option>
+          <option value="on a pillow">on a pillow</option>
+          <option value="in front of a palace">in front of a palace</option>
+          <option value="in the snow">in the snow</option>
+      </select>
+    </div>
+
+    <!-- Activity Selection -->
+    <div class="option">
+      <label for="activity">Activity:</label>
+      <select id="activity">
+        <option value="">Choose Activity</option>
+        <option value="lying down on a soft blanket, resting its paws">Lying down on a soft blanket, resting its paws</option>
+        <option value="playfully pawing at a decorative ball of yarn">Playfully pawing at a decorative ball of yarn</option>
+        <option value="interacting with a small toy mouse">interacting with a small toy mouse</option>
+          <option value="curiously inspecting a bowl of food">curiously inspecting a bowl of food</option>
+          <option value="walking gracefully through the garden, tail held high">walking gracefully through the garden, tail held high</option>
+          <option value="playfully chasing after a feathered toy">playfully chasing after a feathered toy</option>
+          <option value="being gently petted with its eyes closed in contentment">being gently petted, with its eyes closed in contentment</option>
+          <option value="sitting on a plush sofa, looking curiously at the camera">sitting on a plush sofa, looking curiously at the camera</option>
+          <option value="perched on a bookshelf, observing the room silently">perched on a bookshelf, observing the room silently</option>
+          <option value="running playfully">running playfully</option>
+          <option value="sitting calmly">sitting calmly</option>
+          <option value="smiling with a wagging tail">smiling with a wagging tail</option>
+          <option value="running">running</option>
+          <option value="sniffing">sniffing</option>
+          <option value="walking">walking</option>
+          <option value="playing">playing</option>
+      </select>
+    </div>
+
+    <!-- Lighting Selection -->
+    <div class="option">
+      <label for="lighting">Lighting:</label>
+      <select id="lighting">
+        <option value="">Choose Lighting</option>
+        <option value="warm natural sunlight coming through the window, casting soft shadows">Warm, natural sunlight coming through the window, casting soft shadows</option>
+        <option value="soft and diffused lighting, with a slight glow from the chandelier">Soft and diffused lighting, with a slight glow from the chandelier</option>
+        <option value="high-contrast lighting that highlights the cat's round features and plush coat">High-contrast lighting that highlights the cat's round features and plush coat</option>
+          <option value="soft ambient light coming from the kitchen window, creating a warm atmosphere">Soft ambient light coming from the kitchen window, creating a warm atmosphere</option>
+          <option value="soft ethereal lighting as the sun filters through the leaves">Soft, ethereal lighting as the sun filters through the leaves</option>
+          <option value="sunlight streaming through barn windows, casting long shadows on the floor">Sunlight streaming through barn windows, casting long shadows on the floor</option>
+          <option value="warm golden lighting creating a calm, inviting atmosphere">Warm, golden lighting creating a calm, inviting atmosphere</option>
+          <option value="high-contrast lighting with shadows">High-contrast lighting with shadows</option>
+          <option value="soft focused lighting accentuates the sleek coat and vibrant eyes">Soft, focused lighting accentuates the sleek coat and vibrant eyes</option>
+          <option value="with bright natural sunlight">with bright natural sunlight</option>
+          <option value="soft indoor lighting">soft indoor lighting</option>
+          <option value="golden hour lighting">golden hour lighting</option>
+          <option value="soft lighting">soft lighting</option>
+          <option value="vibrant lighting">vibrant lighting</option>
+          <option value="cold natural lighting">cold natural lighting</option>
+          <option value="daytime lighting">daytime lighting</option>
+          <option value="intense lighting">intense lighting</option>
+          <option value="indoor soft lighting">indoor soft lighting</option>
+          <option value="early morning light">early morning light</option>
+          <option value="under sunny bright lighting">under sunny bright lighting</option>
+          <option value="evening lighting">evening lighting</option>
+          <option value="morning light">morning light</option>
+          <option value="afternoon sunlight">afternoon sunlight</option>
+          <option value="under bright daylight">under bright daylight</option>
+          <option value="warm indoor lighting">warm indoor lighting</option>
+          <option value="dramatic lighting">dramatic lighting</option>
+          <option value="sunset lighting">sunset lighting</option>
+          <option value="soft morning light">soft morning light</option>
+          <option value="mid-day lighting">mid-day lighting</option>
+          <option value="soft evening light">soft evening light</option>
+      </select>
+    </div>
+
+    <!-- Generate Button -->
+    <button id="generate-prompt">Generate Prompt</button>
+
+    <!-- Output Section -->
+    <div id="output" class="hidden">
+      <h2>Your Prompt:</h2>
+      <p id="prompt-text"></p>
+      <div class="actions">
+        <button id="copy-prompt">Copy Prompt</button>
+        <button id="share-whatsapp">Share via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+    <div id="post-content"></div>
+  </div>
+      <button id="logoutBtn" class="btn"><span id="expiryDate"></span> Logout</button>
+        <div id="footer"></div>
+     </div>
+  
+ 
+  <script>
+    // Load header and footer
+    fetch('../header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+    // Load and render markdown
+    fetch('guide-pg.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('post-content').innerHTML = 
+          marked.parse(text);
+      });
+  </script>
+   <script>
+function CopyToClipboard(id)
+{
+var r = document.createRange();
+r.selectNode(document.getElementById(id));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../log.js"></script>
+  <script src="pet-pg.js"></script>
+</body>
+</html>
